@@ -12,17 +12,15 @@ document.getElementById('submit-comment').addEventListener('click', function () 
     p2.onclick = function (event) {
         event.target.parentNode.parentNode.parentNode.removeChild(event.target.parentNode.parentNode);
     }
-    if (commentFeild.value === '') {
-        console.log(typeof (comment));
-        console.log('empty');
-        return;
+
+    div.appendChild(p1);
+    div.appendChild(p2);
+
+    if (commentFeild.value == '') {
+
     }
 
     else {
-        console.log(commentFeild.value);
-        console.log('not empty');
-        div.appendChild(p1);
-        div.appendChild(p2);
         //add cmment
         let commentArea = document.getElementById('comment-area');
         commentArea.appendChild(div);
@@ -30,6 +28,7 @@ document.getElementById('submit-comment').addEventListener('click', function () 
 
     commentFeild.value = '';
 });
+
 //post comment by cliking enter
 document.getElementById('comment-field').addEventListener('keyup', function (event) {
     if (event.keyCode === 13) {
