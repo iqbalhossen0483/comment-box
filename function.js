@@ -3,7 +3,7 @@ document.getElementById('submit-comment').addEventListener('click', function () 
     let commentFeild = document.getElementById('comment-field');
     let comment = commentFeild.value;
     //create comment
-    let h4 = document.createElement('h4');
+    let div = document.createElement('div');
     let p1 = document.createElement('p');
     let p2 = document.createElement('p');
     p1.innerText = comment;
@@ -21,11 +21,11 @@ document.getElementById('submit-comment').addEventListener('click', function () 
     else {
         console.log(commentFeild.value);
         console.log('not empty');
-        h4.appendChild(p1);
-        h4.appendChild(p2);
+        div.appendChild(p1);
+        div.appendChild(p2);
         //add cmment
         let commentArea = document.getElementById('comment-area');
-        commentArea.appendChild(h4);
+        commentArea.appendChild(div);
     }
 
     commentFeild.value = '';

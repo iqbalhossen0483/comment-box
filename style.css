@@ -24,7 +24,7 @@ body{
     height: 90%;
     overflow: auto;
 }
-#comment-area h4{
+#comment-area div{
     background-color: white;
     font-weight: 400;
     padding: 5px 10px;
@@ -59,4 +59,5 @@ body{
     position: absolute;
     bottom: 55px;
     right: 5px;
+    display: none;
 }
