@@ -39,7 +39,7 @@ body{
 #close:hover{
     color: gray;
 }
-#write-comment{
+#comment-field{
     border: 1px solid #80808069;
     border-radius: 15px;
     padding: 5px 10px;
@@ -52,12 +52,11 @@ body{
     width: 90%;
     height: 40px;
 }
-#write-comment:focus{
+#comment-field:focus{
     outline: none;
 }
 #submit-comment{
     position: absolute;
     bottom: 55px;
     right: 5px;
-    display: none;
 }

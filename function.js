@@ -1,6 +1,6 @@
 document.getElementById('submit-comment').addEventListener('click', function () {
     //comment feild
-    let commentFeild = document.getElementById('write-comment');
+    let commentFeild = document.getElementById('comment-field');
     let comment = commentFeild.value;
     //create comment
     let h4 = document.createElement('h4');
@@ -12,17 +12,26 @@ document.getElementById('submit-comment').addEventListener('click', function () 
     p2.onclick = function (event) {
         event.target.parentNode.parentNode.parentNode.removeChild(event.target.parentNode.parentNode);
     }
-    h4.appendChild(p1);
-    h4.appendChild(p2);
+    if (commentFeild.value === '') {
+        console.log(typeof (comment));
+        console.log('empty');
+        return;
+    }
 
-    //add cmment
-    let commentArea = document.getElementById('comment-area');
-    commentArea.appendChild(h4);
+    else {
+        console.log(commentFeild.value);
+        console.log('not empty');
+        h4.appendChild(p1);
+        h4.appendChild(p2);
+        //add cmment
+        let commentArea = document.getElementById('comment-area');
+        commentArea.appendChild(h4);
+    }
 
     commentFeild.value = '';
 });
 //post comment by cliking enter
-document.getElementById('write-comment').addEventListener('keyup', function (event) {
+document.getElementById('comment-field').addEventListener('keyup', function (event) {
     if (event.keyCode === 13) {
         event.preventDefault();
         document.getElementById('submit-comment').click();
